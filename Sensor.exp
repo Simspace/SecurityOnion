@@ -1,0 +1,9 @@
+#!/usr/bin/expect
+#set exp_internal 1
+set timeout -1
+spawn sosetup -f /PATH/TO/SOSETUP.CONF
+expect "anything else to exit"
+send "yes\r"
+expect "password:"
+send "THISISMYREALLYSTRONGPASSWORD\r"
+expect "support or training"
